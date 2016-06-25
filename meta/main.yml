@@ -1,0 +1,18 @@
+galaxy_info:
+  author: Travis South
+  description: Updates bashrc
+  company: travis-south
+
+  license: BSD
+
+  min_ansible_version: 1.2
+
+  platforms:
+  - name: EL
+    versions:
+    - 6
+    - 7
+  
+galaxy_tags: []
+  
+dependencies: []
