@@ -12,7 +12,8 @@ galaxy_info:
     versions:
     - 6
     - 7
-  
-galaxy_tags: []
-  
+
+galaxy_tags:
+  - web
+
 dependencies: []
