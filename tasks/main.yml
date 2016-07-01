@@ -5,6 +5,6 @@
     dest: ~/.bashrc
     block: |
       parse_git_branch() {
-        git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+        { svn info 2> /dev/null | grep -i URL: | sed -r 's/URL: http:\/\/.*\/svn\/[a-zA-Z_0-9-]+\/?(.*)/ (\/\1)/'; git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'; } | xargs echo -n
       }
       export PS1="\u@\h \W\[\033[32m\]\$(parse_git_branch)\[\033[00m\] $ "
